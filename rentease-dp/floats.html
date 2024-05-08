@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Floats</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="font-sans bg-gradient-to-r from-gray-300 to-gray-400">
+    <header class="bg-green-500 text-white py-4 flex justify-between items-center px-8">
+        <div>
+            <img src="images/company-logo.ico" alt="company-logo" class="w-36">
+        </div>
+        <div>
+            <p id="userName">Username</p>
+        </div>
+        <nav class="text-xl font-semibold">
+            <ul class="flex">
+                <li class="mx-4"><a href="index.html">Home</a></li>
+                <li class="mx-4"><a href="floats.html">All Floats</a></li>
+                <li class="mx-4"><a href="user.html">User</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button id="logout" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Logout</button>
+        </div>
+    </header>
+
+    <section class="container mx-auto my-8 px-4">
+        <form id="filterForm" class="flex justify-between items-center mb-8">
+            <input name="city" type="text" placeholder="City"
+                class="border border-gray-300 rounded-lg px-4 py-2 w-1/4">
+            <input name="minarea" type="number" placeholder="Min Area"
+                class="border border-gray-300 rounded-lg px-4 py-2 w-1/4">
+            <input name="maxarea" type="number" placeholder="Max Area"
+                class="border border-gray-300 rounded-lg px-4 py-2 w-1/4">
+            <select name="price"
+                class="border border-gray-300 rounded-lg px-4 py-2 w-1/4 bg-white focus:outline-none focus:border-gray-500">
+                <option value="" selected>Select a Value</option>
+                <option value="0-500">0-500</option>
+                <option value="501-1000">501-1000</option>
+                <option value="1001-2000">1001-2000</option>
+                <option value="2001-10000">2001-10000</option>
+            </select>
+            <input type="submit" value="Filter"
+                class="bg-gray-700 text-white px-4 py-2 rounded-lg ml-4 hover:bg-gray-800">
+        </form>
+
+        <div class="overflow-x-auto">
+            <table class="w-full table-auto" id="tblFloats">
+                <thead>
+                    <tr class="bg-gray-400">
+                        <th class="px-4 py-2">City</th>
+                        <th class="px-4 py-2">Street Name</th>
+                        <th class="px-4 py-2">Street Number</th>
+                        <th class="px-4 py-2">Area Size</th>
+                        <th class="px-4 py-2">A/C</th>
+                        <th class="px-4 py-2">Year Built</th>
+                        <th class="px-4 py-2">Rent Price</th>
+                        <th class="px-4 py-2">Date Available</th>
+                        <th class="px-4 py-2">Favorite</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="max-w-md mx-auto p-8 bg-gray-100 rounded-lg shadow-xl mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Add Float</h2>
+            <form action="#" id="add_Float" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <label for="city" class="m-2"> City: </label>
+                <input type="text" name="city" id="city" placeholder="City Name" required
+                    class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-gray-500">
+                <label for="streetName" class="m-2">Street Name: </label>
+                <input type="text" name="streetName" id="streetName" placeholder="Street Name" required
+                    class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-gray-500">
+                <label for="streetNumber" class="m-2">Street Number:</label>
+                <input type="number" name="streetNumber" id="streetNumber" placeholder="Street Number" min="0" required
+                    class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-gray-500">
+                <label for="areaSize" class="m-2"> Area Size: </label>
+                <input type="number" name="areaSize" id="areaSize" placeholder="Area Size" required
+                    class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-gray-500">
+                <label for="ac" class="m-2">It has air conditioner?</label>
+                <select name="AC" id="ac" required
+                    class="border border-gray-300 rounded-lg px-4 py-2 bg-white focus:outline-none focus:border-gray-500">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <label for="yearBuilt" class="m-2"> Year Built: </label>
+                <input type="date" name="yearBuilt" id="yearBuilt" required
+                    class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-gray-500">
+                <label for="price" class="m-2"> Rent Price: </label>
+                <input type="number" name="price" min="0" id="price" placeholder="Rent Price" required
+                    class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-gray-500">
+                <label for="available" class="m-2">Date Available: </label>
+                <input type="date" name="available" placeholder="Date Available" id="available" min="2024-01-01"
+                    class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-gray-500">
+                <div class="col-span-2 flex justify-end mt-4">
+                    <button class="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-800"
+                        id="saveFloat">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-600 text-white py-4 text-center">
+        <p>&copy; 2024 Rent Ease. All rights reserved.</p>
+    </footer>
+
+    <script src="floats.js"></script>
+    <script src="main.js"></script>
+    <script src="users.js"></script>
+    <script src="log-in.js"></script>
+</body>
+
+</html>

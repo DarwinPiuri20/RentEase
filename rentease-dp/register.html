@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/bd325d9649.js" crossorigin="anonymous"></script>
+    <title>Register</title>
+
+
+<body class="bg-[#5d9dfd]">
+    <header class="flex justify-center items-center">
+        <img src="images/company-logo.ico" alt="company-logo" class="w-44 m-2 p-2">
+    </header>
+    <section class="w-full  flex items-center justify-center  font-serif  ">
+        <div class=" bg-[#bed8ff]  w-5/6  rounded-lg text-center justify-center items-center ">
+            <h1 class=" m-2 p-2  font-bold text-lg">Create Account</h1>
+            <article>
+                <form action="#" class="p-4 m-3 justify-center items-center  " id="registerForm">
+
+
+                    <label for="firstName" class="m-4 p-2"> First Name: <input type="text" placeholder="First Name"
+                            name="firstName" id="firstName"
+                            class="w-auto  m-4 p-2 rounded-lg hover:drop-shadow-xl" min="2" required></label>
+
+                    <label for="lastName" class="m-4 p-2"> Last Name: <input type="text" placeholder="Last Name"
+                            name="lastName" id="lastName"required
+                            class="w-auto  m-4 p-2 rounded-lg hover:drop-shadow-xl" min="2"></label><br>
+
+                    <label for="email" class="m-4 p-2"> E-mail: <input type="email" placeholder="Enter your E-mail"
+                            name="email" id="email"required class="w-auto  m-4 p-2 rounded-lg hover:drop-shadow-xl"> </label>
+
+                    <label for="birthDate" class="m-4 p-2">Birth Date: <input type="date" name="birthDate"
+                        required class="w-auto  m-4 p-2 rounded-lg hover:drop-shadow-xl" id="birthDate" min="1904-01-01">
+                    </label> <br>
+
+                    <label for="password" class="m-4 p-2">Password: <input type="password" id="password"
+                            placeholder="Enter your Password" name="password" minlength="6" maxlength="10"
+                            required class="w-auto  m-4 p-2 rounded-lg hover:drop-shadow-xl"> </label>
+
+                  
+
+                    <p class="text-sm">You have account <a href="login.html" class="text-sm underline  ">Log In</a></p>
+                    <input type="submit"
+                        class="bg-[#1a43db] text-white m-4 p-2 rounded-lg hover:drop-shadow-xl hover:bg-[#5d9dfd]"
+                        value="Create Account">
+                        
+                </form>
+
+
+            </article>
+        </div>
+    </section>
+    <script src="register.js"></script>
+   
+</body>
+
+</html>
